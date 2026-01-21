@@ -51,7 +51,8 @@ print("F1 Score:", f1_score(y_test, y_pred))
 
 # Save model and scaler
 os.makedirs("model", exist_ok=True)
-joblib.dump(model, "model/breast_cancer_model.pkl")
-joblib.dump(scaler, "model/scaler.pkl")
+joblib.dump(model, "breast_cancer_model.pkl")
+joblib.dump(scaler, "scaler.pkl")
 
 print("Model and scaler saved successfully!")
+
