@@ -6,8 +6,8 @@ import os
 app = Flask(__name__)
 
 # Load model and scaler
-model = joblib.load("model/breast_cancer_model.pkl")
-scaler = joblib.load("model/scaler.pkl")
+model = joblib.load("breast_cancer_model.pkl")
+scaler = joblib.load("scaler.pkl")
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -31,4 +31,5 @@ def index():
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
+
     app.run(host="0.0.0.0", port=port)
